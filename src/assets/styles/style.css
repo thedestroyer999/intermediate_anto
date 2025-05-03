@@ -1,0 +1,502 @@
+/* ========== Global Styles ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #c7c7c7;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* ========== Typography ========== */
+h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ========== Login Section & Form ========== */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #c7c7c7;
+}
+
+.login-form {
+  background-color: #1e2a32;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.login-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.login-form input::placeholder {
+  color: #b3b3b3;
+}
+
+.login-form button[type="submit"] {
+  padding: 0.75rem;
+  background-color: #1dc5a3;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #17b193;
+}
+
+.login-form a {
+  color: #1dc5a3;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+/* ========== Logo & Header ========== */
+.login-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-logo-container img {
+  width: 100px;
+  height: 100px;
+}
+
+.login-logo-container h2 {
+  color: white;
+  margin: 0.5rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== Story View ========== */
+.story-feed {
+  padding: 1rem;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+}
+
+.story-feed h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+/* ========== Story List ========== */
+.story-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* ========== Story Item ========== */
+.story-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.story-item:hover {
+  transform: translateY(-5px);
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.story-header img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.story-header .username {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.story-caption {
+  margin-top: 10px;
+  word-break: break-word;
+}
+
+.story-caption p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.detail-button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #1dc5a3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.detail-button:hover {
+  background-color: #17b193;
+}
+
+/* ========== Map ========== */
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== Navbar Styles ========== */
+.navbar {
+  background-color: #1e2a32;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar-logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.navbar-button {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.navbar-button:hover,
+.navbar-button:focus {
+  background-color: #1dc5a3;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.navbar-skip-link {
+  display: inline-block;
+  background-color: #1dc5a3;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.navbar-skip-link:hover,
+.navbar-skip-link:focus {
+  background-color: #17b193;
+}
+
+/* ========== Footer ========== */
+.footer {
+  background-color: #1e2a32;
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-credit {
+  font-size: 0.95rem;
+  color: #b3b3b3;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========== Detail Page ========== */
+.detail-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #1c1c1e;
+  color: #f1f1f1;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.detail-info h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f1f1f1;
+}
+
+.detail-info p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.detail-info strong {
+  color: #1dc5a3;
+}
+
+.detail-image {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #000;
+  margin-bottom: 1rem;
+}
+
+.detail-button {
+  padding: 0.7rem 1rem;
+  background-color: #17b193;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.detail-button:hover {
+  background-color: #2f80ed;
+}
+
+/* ========== Add Story Page ========== */
+.add-story {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #1c1c1e;
+  color: #f1f1f1;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add-story-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.add-story-form .form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-story-form label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.add-story-form textarea,
+.add-story-form input[type="file"] {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #2c2c2e;
+  color: #fff;
+  resize: vertical;
+}
+
+.add-story-form textarea::placeholder {
+  color: #888;
+}
+
+.capture-button,
+.submit-button {
+  padding: 0.7rem 1rem;
+  background-color: #17b193;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.capture-button:hover,
+.submit-button:hover {
+  background-color: #2f80ed;
+}
+
+.responsive-media {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: #000;
+}
+
+#location-coordinates {
+  margin-top: 0.5rem;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .login-logo-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .login-form button[type="submit"] {
+    font-size: 1rem;
+  }
+
+  .story-list {
+    grid-template-columns: 1fr;
+  }
+
+  .story-feed h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-button {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-credit {
+    font-size: 0.85rem;
+  }
+
+  .detail-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .detail-info p {
+    font-size: 0.9rem;
+  }
+
+  .add-story-title {
+    font-size: 1.3rem;
+  }
+}
